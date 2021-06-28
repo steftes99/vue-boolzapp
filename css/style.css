@@ -8,22 +8,32 @@ body {
     background-size: cover;
     
 }
-
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
 .container {
     width: 80vw;
     height: 85vh;
     margin: 50px auto;
     background-color: white;
-    border: 1px solid black;
+    
 }
 .left {
     width: 35%;
+    float: left;
     
+}
+.right{
+    width: 65%;
+    float: right;
 }
 .navbar-left{
     height: 10vh;
     background-color: #EAEAEA;
     position: relative;
+    border-right: 1px solid #B1B1B1;
 }
 .avatar{
     width: 15%;
@@ -40,7 +50,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 .icons{
-    display: inline-block;
     float: right;
     margin-top: 25px;
     margin-right: 10px;
@@ -111,4 +120,31 @@ body {
     top: 15px;
     margin-left: 10px;
     font-family: 'Roboto', sans-serif;
+}
+.navbar-right{
+    height: 10vh;
+    background-color: #EAEAEA;
+}
+.navbar-right > img{
+    width: 8%;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.contact-info{
+    display: inline-block;
+    position: relative;
+    
+}
+.name{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    bottom: 60px;
+    
+}
+.access{
+    color: #6D8C94;
+    margin-bottom: 20px;
+    
+
 }

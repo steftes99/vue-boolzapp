@@ -145,6 +145,9 @@ body {
 .access{
     color: #6D8C94;
     margin-bottom: 20px;
-    
-
+}
+.chat{
+    height: 65vh;
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }

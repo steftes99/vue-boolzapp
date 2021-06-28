@@ -22,7 +22,7 @@ body {
 .navbar-left{
     height: 10vh;
     background-color: #EAEAEA;
-    
+    position: relative;
 }
 .navbar-left > img {
     width: 15%;
@@ -32,7 +32,11 @@ body {
 }
 .navbar-left > p {
     display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    top: 30px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .icons{
     display: inline-block;
@@ -55,8 +59,21 @@ body {
     border-radius: 50%;
     font-size: 25px;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 10px;
-
-
+}
+.info{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.black{
+    font-family: 'Roboto', sans-serif;
+}
+.underline-grey{
+    color: #6D8C94;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
 }

@@ -107,7 +107,7 @@ body {
 }
 .contacts{
     height: 100%;
-    overflow: auto;
+    overflow-y: scroll;
 }
 .friend{
     height: 10vh;
@@ -150,4 +150,22 @@ body {
     height: 65vh;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+}
+.textarea{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EAEAEA;
+}
+.textarea > i{
+    color: #6B7376;
+    font-size: 24px;
+}
+.textarea > input{
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #186EE1;
+    border-radius: 5px;
 }

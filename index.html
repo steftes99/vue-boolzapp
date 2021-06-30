@@ -45,34 +45,18 @@
             </div>
 
             <div class="contacts">
-                <div class="friend">
-                    <img class="avatar" src="img/avatar_1.jpg" alt="">
-                    <p>Francesco</p>
-                </div>
-                <div class="friend">
-                    <img class="avatar" src="img/avatar_6.jpg" alt="">
-                    <p>Carla</p>
-                </div>
-                <div class="friend">
-                    <img class="avatar" src="img/avatar_4.jpg" alt="">
-                    <p>Giovanni</p>
-                </div>
-                <div class="friend">
-                    <img class="avatar" src="img/avatar_io.jpg" alt="">
-                    <p>Maria</p>
-                </div>
-                <div class="friend">
-                    <img class="avatar" src="img/avatar_5.jpg" alt="">
-                    <p>Luigi</p>
+                <div v-for="(contact, index) in contacts" class="friend" @click="setContactActive(index)">
+                    <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                    <p>{{contact.name}}</p>
                 </div>
             </div>
         </div>
 
         <div class="right clearfix">
             <div class="navbar-right">
-                <img src="img/avatar_1.jpg" alt="">
+                <img :src="'img/avatar' + contacts[contactActive].avatar + '.jpg'" alt="">
                 <div class="contact-info">
-                    <p class="name">Francesco</p>
+                    <p class="name"> {{contacts[contactActive].name}} </p>
                     <p class="access">Ultimo accesso oggi alle</p>
                 </div>
 
@@ -84,7 +68,14 @@
             </div>
 
             <div class="chat">
-
+                <div class="messages-container">
+                   
+                        <div v-for="message in contacts[contactActive].messages" :class="message.status">
+                            <span class="message">{{message.text}}</span>
+                        </div>
+                    
+                   
+                </div>
             </div>
 
             <div class="textarea">

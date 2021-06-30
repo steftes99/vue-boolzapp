@@ -15,7 +15,7 @@ body {
 }
 .container {
     width: 80vw;
-    height: 85vh;
+    height: 90vh;
     margin: 50px auto;
     background-color: white;
     
@@ -114,6 +114,13 @@ body {
     position: relative;
     
 }
+.friend:hover{
+    cursor: pointer;
+    filter: brightness(90%);
+}
+.friend:active{
+    background-color: #F0F0F0;
+}
 .friend > p{
     display: inline-block;
     position: absolute;
@@ -147,9 +154,32 @@ body {
     margin-bottom: 20px;
 }
 .chat{
-    height: 65vh;
+    height: 70vh;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+}
+.messages-container{
+    width: 80%;
+    margin: 80px auto;
+}
+.received{
+    width: 50%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.sent{
+    width: 50%;
+    height: 50px;
+    background-color: #DCF8CA;
+    float: right;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+.message{
+    font-family: 'Roboto', sans-serif;
 }
 .textarea{
     height: 10vh;

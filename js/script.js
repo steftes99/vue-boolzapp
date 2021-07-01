@@ -2,6 +2,7 @@ var app = new Vue ({
     el : '#app',
     data : { 
         contactActive: 0,
+        newMessage: '',
         contacts : [
             {
                 name: 'Francesco',
@@ -93,7 +94,24 @@ var app = new Vue ({
     methods: {
         setContactActive(indice){
             this.contactActive = indice;
-            console.log(this.contactActive);
+        },
+        submit(){
+           const newMess = {
+               date: dayjs().format("DD-MM-YYYY HH-mm-ss") ,
+               text: this.newMessage,
+               status: 'sent'
+           };
+           this.contacts[this.contactActive].messages.push(newMess);
+           this.newMessage = '';
+
+           setTimeout(() => {
+               const reply = {
+                   date: dayjs().format("DD-MM-YYYY HH-mm-ss"),
+                   text: 'ok',
+                   status: 'received'
+               };
+               this.contacts[this.contactActive].messages.push(reply);
+           },1000);
         }
     } 
 })

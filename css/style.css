@@ -164,22 +164,34 @@ body {
 }
 .received{
     width: 50%;
-    height: 50px;
+    
     background-color: white;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 .sent{
     width: 50%;
-    height: 50px;
+    
     background-color: #DCF8CA;
     float: right;
     margin-top: 50px;
     display: flex;
     align-items: center;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 .message{
     font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    
+}
+.date{
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    
 }
 .textarea{
     height: 10vh;

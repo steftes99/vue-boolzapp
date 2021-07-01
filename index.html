@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </head>
 <body>
    
@@ -72,6 +73,7 @@
                    
                         <div v-for="message in contacts[contactActive].messages" :class="message.status">
                             <span class="message">{{message.text}}</span>
+                            <span class="date">{{message.date}}</span>
                         </div>
                     
                    
@@ -80,7 +82,7 @@
 
             <div class="textarea">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="submit" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
                 <i class="fas fa-microphone"></i>
             </div>
         </div>
